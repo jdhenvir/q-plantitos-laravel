@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UsersController;
-use App\Http\Controllers\PlantsController;
+use App\Http\Controllers\ShopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +29,8 @@ Route::post('/user/create/', [UsersController::class, 'createUser']);
 Route::post('/user/auth/', [UsersController::class, 'authenthecate']);
 
 //plants api
-Route::get('/plants',[PlantsController::class,'getPlants']);
-Route::get('/plant/{id}',[PlantsController::class,'getPlantbyID']);
-Route::get('/plant/{name}',[PlantsController::class,'getPlantbyName']);
-Route::post('/plant/add', [PlantsController::class, 'addPlant']);
-Route::put('/plant/update/{id}', [PlantsController::class, 'updatePlant']);
+Route::get('/shop',[ShopController::class,'getProducts']);
+Route::get('/shop/{id}',[ShopController::class,'getProductbyID']);
+// Route::get('/plant/{name}',[PlantsController::class,'getPlantbyName']);
+// Route::post('/plant/add', [PlantsController::class, 'addPlant']);
+// Route::put('/plant/update/{id}', [PlantsController::class, 'updatePlant']);
